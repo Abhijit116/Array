@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG | ARRAY</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #1d1d1d; /* Dark Blue Background */
+            color: #ffffff; /* Light Text Color */
+        }
+        .navbar {
+            background-color: #061728; /* Darker Blue for Navbar */
+           
+        }
+        
+        img{
+            height: 60px;
+            width: 60px;
+        }
+        .footer {
+            background-color: #061728; /* Darker Blue for Footer */
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            cursor: default;
+        }
+       h4 i{
+        color: rgb(56, 213, 17);
+       }
+       .container img{
+        min-width: 380px;
+        min-height: 200px;
+       }
+        .code{
+           font-size: 20px;
+           padding: 5px;
+           background-color: rgb(255, 255, 255);
+           border-radius: 10px;
+        
+        }
+        .array_types li{
+            font-weight: bold;
+        }
+        @media only screen and (min-width:900px)
+         { 
+            .arr1{
+                height: 400px;
+                width: 700px;
+            }
+         }
+         .navbar-toggler{
+            background-color: none;
+            border: none;
+         }
+         .navbar-toggler:hover{
+            scale: 1.05;
+            transition: .5s ease;
+            box-shadow: 2px 2px 20px cyan;
+         }
+         .code-box {
+            background-color: #2d2d2d; /* Dark background for the code box */
+            border: 1px solid #444;
+            border-radius: 0.375rem;
+            padding: 1rem;
+            position: relative;
+            overflow: auto;
+            color: #f8f8f2; /* Light text color */
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+        }
+        .formula{
+            text-align: center;
+            font-size: 18px;
+            padding: 20px;
+            min-height: 80px;
+            max-width:500px ;
+            border-radius: 10px;
+            color: rgb(18, 211, 211);
+            background-color: #303030;
+            
+        }
+        table, tr, td,th{
+            border: 1px solid;
+            text-align: center;
+            padding: 4px;
+        }
+        p{
+            font-size: 19px;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html"><img src="logo.png" alt="LG">LocalN'Global</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h3 style="text-align: center; color:  rgb(238, 13, 227);"><u>ARRAY | DATA STRUCTURE</u></h3>
+        <section class="container">
+            <div class="container">
+                <h4>What is an <span><i>Array</i></span></h4>
+                <p>An array is a linear data structure, contains a list of finite elements of similar data types, stored at contigious memory locations.</p>
+                
+                <h4>Why we <i>use Array?</i></h4>
+                <ul>
+                    <li>Arrays are good for storing multiple values in a single variable.</li>
+                    <li>Sorting and searching a value in an array is easier.</li>
+                    <li>Arrays are best to process multiple values quickly and easily.</li>
+                </ul>
+               <div class="container arr1 "><img src="arr.png" alt="array" style="width: 100%; height: 100%; border-radius: 5px; margin-left: -37px;"></div><br> <br>
+                <h4>Syntax & Declaration :-</h4>
+                <ul>
+                    <li>
+                    data_type array_name[size];
+                </li> 
+                <li>
+                    data_type array_name[]={Element1, Element2,.......,Elementn};
+               </li>
+            </ul>
+                <p>Examples:- <br> <br><b>Type1:-</b>
+<!-- code block -->
+            <div class="code-box" id="code1">
+                <button class="btn bg-dark text-success copy-btn" onclick="copyToClipboard('code1',this)"><i class='bx bx-copy'></i></button>
+                <pre><code class="language-c" >
+int int_Array[5];
+float flt_Array[5];
+double dbl_Array[5];
+                </code></pre>
+            </div>
+
+
+            <br>
+                    <b>Type2:-</b> <br> <br>
+                    <!-- code block -->
+                    <div class="code-box" id="code2">
+                        <button class="btn bg-dark text-success copy-btn" onclick="copyToClipboard('code2',this)"><i class='bx bx-copy'></i></button>
+                        <pre><code class="language-c" >
+int Array[] = {1, 2, 3, 4, 5, 10, 20, 40, 50, 99, 100};
+char Array[] = {'a', 'b', 'c', 'd', 'e'};                        
+                        </code></pre>
+                    </div>
+            
+                </p>
+                <h4>How to Access Elements?</h4>
+                <p>Elements in array can be accessed using [ ] brackets.
+                </p>
+                      
+            <!-- Code block -->
+                <div class="code-box" id="code3">
+                    <button class="btn bg-dark text-success copy-btn" onclick="copyToClipboard('code3', this)"><i class='bx bx-copy'></i></button>
+                    <pre><code class="language-c" >
+int A[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+printf(“%d”, A[0]); 
+printf(“%d”, A[9]); 
+A[0] = 1000; 
+printf(“%d”,A[0]);
+                    </code></pre>
+                </div>
+                
+                <br>
+                <h4>>>Properties of Array :-</h4>
+                <ol>
+                    <li>Arrays can be described as a type of data structure used to store a 
+                        group or collection of items or elements sequentially inside a 
+                        memory.</li>
+                    <li>The main function of an Array is to store a collection of 
+                        homogenous data of the same type. For example, integers, 
+                        strings, floating numbers, etc.</li>
+                    <li>The indexing of an Array is 0 based indexing ie the first element is at 
+                        index 0 and the second element is at index 1 and so forth. We 
+                        can directly access the required elements using the indexes.</li>
+                    <li>The memory allocation in Arrays is contiguous in nature.</li>
+                    <li>We can create both single-dimensional and multidimensional 
+                        arrays.</li>
+                </ol>
+                <h4>How to take input & display array elements?</h4>
+               
+                    
+                   <!-- code block -->
+                   <div class="code-box" id="code4">
+                    <button class="btn btn-dark text-success copy-btn" onclick="copyToClipboard('code4', this)"><i class='bx bx-copy'></i></button>
+                    <pre><code class="language-c">
+//input the array
+int arr[5];
+for(int i=0;i<5;i++)
+{
+    scanf("%d", &arr[i]);
+}
+
+//display the array elements
+for(int i=0;i<5;i++)
+{
+    printf("%d ", arr[i]);
+}
+                    </code></pre>
+                </div>
+
+                <h4>Examples:-</h4>
+                <h6>Create an array of Fruits:</h6>
+                <!-- code block -->
+                <div class="code-box" id="code5">
+                    <button class="btn btn-dark text-success copy-btn" onclick="copyToClipboard('code5',this)"><i class='bx bx-copy'></i></button>
+                    <pre><code class="language-c">
+char *fruits[] = {"Mango", "Litchie", "Berry", "Date", "Jackfruit"};
+                    </code></pre>
+                </div>
+                <h6>Display the elements to the console:</h6>
+                <!-- code block -->
+                <div class="code-box" id="code6">
+                    <button class="btn btn-dark text-success copy-btn" onclick="copyToClipboard('code6',this)"><i class='bx bx-copy'></i></button>
+                    <pre><code class="language-c">
+for (int i = 0; i < 5; i++)
+{
+    printf("%s ",fruits[i]);
+}
+                    </code></pre>
+                </div>
+                <h4><i>>>Types</i> of Array:</h4>
+                <ol class="array_types">
+                    
+                        <li>Single-Dimensional Array(1D)</li>
+                        <li>Multi-Dimensional Array
+                            <ul>
+                                <li>Two-Dimensional Array(2D)</li>
+                                <li>Higher-Dimensional Arrays</li>
+                            </ul>
+                        </li>
+                        
+                </ol>
+                <h4><i>1.One-Dimensional</i> Array:</h4>
+                <p>A linear collection of elements where each element is accessed by a 
+                    single index. <br>
+                e.g. int arr[5] = {1, 2, 3, 4, 5}; // A 1D array of integers <br>
+                <b>Usage:-</b></p>
+                <ol>
+                    <li>Commonly used to store simple lists of data, like numbers, names & others.</li>
+                    <li>Used to store these data in a linear way.</li>
+                </ol>
+                <p><b>Size/Length of an Array :</b>
+                The size(how many elements are there in the array) of an array can be determined by its indices. The formula is - </p>
+
+               <div class="formula" style="text-align: center; border: 1px solid;"><p><i>SIZE = UB - LB + 1</i></p></div> 
+
+
+               <br> <p></p>Where UB=Upper bound or the largest index, LB=Lower bound or Smallest index</p> <br>
+                <h4><i>>Memory allocation</i> of 1D Array:</h4>
+                <p>In computer memory, an array takes a block of memory inside the memory & the array elements are stored at consecutive memory locations of that block. <br> 
+                Let A is a linear array.The memory allocation for the array A is shown in the following figure-</p>
+
+               <div class="container arr1"><img src="mr_arr.png" alt="arrayinmemory"style="width: 100%; height: 100%; border-radius: 5px; margin-left: -37px;" ></div>
+               <br>
+               <p>If we want to get the <b>address of a particular element</b> in the memory by its index, we need to keep track of base address of that array & then we have to apply the formula below-</p>
+               
+               
+                
+                <div class="formula" style="text-align: center; border: 1px solid; "><p><i>Address(A[n]) = Base(A) + S  &times; (n - LB) </i></p></div>
+                
+                <br>
+                <p> Where A[n]=The element whose address is to be found, <br> Base(A)=Base Address of the array A<br>
+                    S=Size of each element(int=2/4, char=1, float=8 etc.)
+                <br> n = Index of the element, 
+                <br> LB=Lower bound or Smallest index</p>
+                    <h5>Example:-</h5>
+                <div class="container arr1"><img src="Addr_ex.png" alt="arrayinmemory"style="width: 100%; height: 100%; border-radius: 5px; margin-left: -37px;" ></div>
+
+                   <br>
+                <p>For the above image- <br>
+                Let we want to get address of the element at the index no. 3. <br>
+                So, we'll use the above formula- <br>
+                Address(A[3])=B + S &times;( n-LB ) <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                =4000 + 1&times;(3-0) <span style="font-size: 15px; opacity: .3;">//base address=4000, S=1 for char, n=3, LB=0</span><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                =4000+3 = 4003 <br>
+                So, the address of A[3]=4003 as we can see in the image.</p>
+
+
+
+                <h4><i>2.Multi-Dimensional</i> Array:</h4>
+                <p>Arrays with more than one dimensions are known as multi-dimensional array. <br>
+                Example:- 2D Array(Matrix), 3D Array etc.</p>
+                <h4><i>>>Two-Dimensional</i> Array:</h4>
+                <p>A 2D array is a data structure that is used to store data in a grid arrangement in rows & columns. It can be thought of as an array of arrays. <br> <br>
+                It can be visualized as a matrix of m&times;n order, where <br> m = no. of rows ; n = no. of columns.</p>
+
+
+                <div class="container arr1"><img src="2d_Array.png" alt="2Darray"style="width: 100%; height: 100%; border-radius: 5px; margin-left: -37px;" ></div>
+                    <br>
+                    <h6>Example:-</h6>
+                    
+                    <div class="code-box" id="code7">
+                        <button class="btn btn-dark text-success copy-btn" onclick="copyToClipboard('code7', this)"><i class='bx bx-copy'></i></button>
+                        <pre><code class="language-c">
+int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+                        </code></pre>
+                    </div>
+                    <div class="code-box" id="code8">
+                        <button class="btn btn-dark text-success copy-btn" onclick="copyToClipboard('code8', this)"><i class='bx bx-copy'></i></button>
+                        <pre><code class="language-c">
+char grid[2][3] = {{'A', 'B', 'C'}, {'D', 'E', 'F'}};
+                        </code></pre>
+                    </div>
+                    <h5>How to take input & display 2D array elements?</h5>
+               
+                    
+                   <!-- code block -->
+                   <div class="code-box" id="code9">
+                    <button class="btn btn-dark text-success copy-btn" onclick="copyToClipboard('code9', this)"><i class='bx bx-copy'></i></button>
+                    <pre><code class="language-c">
+//input the matrix
+int mat[5][5];
+for(int i=0;i<5;i++)
+{
+    for(int j=0;j<5;j++)
+    {
+        scanf("%d", &mat[i][j]);
+    }
+    
+}
+
+//display the matrix
+for(int i=0;i<5;i++)
+{
+    for(int j=0;j<5;j++)
+    {
+        printf("%d ", mat[i][j]);
+    }
+    printf("\n");
+    
+}
+                    </code></pre>
+                </div>
+                <h5>How to access 2D array elements?</h5>
+                <div class="code-box" id="code10">
+                    <button class="btn btn-dark text-success copy-btn" onclick="copyToClipboard('code10', this)"><i class='bx bx-copy'></i></button>
+                    <pre><code class="language-c">
+int value=mat[1][0];//Access the element of 2nd row & 1st column, since index starts from [0][0]
+                    </code></pre>
+                </div>
+                <h4><i>>Memory allocation</i> of 2D Array:</h4>
+                <p>A 2D array is stored in memory as a single contiguous block arranged in either row-major or column-major order.</p>
+                <p>There is 2 major techniques for a 2D array representation- 
+                    <ol>
+                        <li>Row-major order representation</li>
+                        <li>Column-major order representation</li>
+                    </ol>
+                </p> 
+                <!-- Row major order -->
+                <h5><i style="color: rgb(2, 221, 2);">1.Row-major order</i> representation:-</h5>
+                <p> For row-major order, the array elements are stored in the memory <b>row by row</b> i.e. stores successive row elements and then moves to the next row.</p>
+                
+                <div class="container arr1"><img src="Row_major.png" alt="row-major"style="width: 100%; height: 100%; border-radius: 5px; margin-left: -37px;" ></div>
+                <br>
+                <p>To find address of any element using row-major order, use the following formula-</p>
+                
+                <div class="formula" style="text-align: center; border: 1px solid; "><p><i>Address(A[i][j]) = B + S  &times; [( i-SR )&times;n + ( j-SC )] </i> <br></p>
+                <br>
+                <p style="text-align: left; color: white;">
+                    B=Base address of the given matrix <br>
+                    S=Size of each element in teh storage(int=2/4, char=1, float=8 etc.) <br>
+                    i=row of the searchable element <br>
+                    j=column of the searchable element <br>
+                    m=No. of rows in the given array <br>
+                    n= No. of columns in the given array <br>
+                    SR=Starting row index of the given array <br>
+                    SC=Starting column index of the given array
+                </p>
+            </div>
+            <br>
+<!-- Column major order -->
+            <h5><i style="color: rgb(2, 221, 2);">2.Column-major order</i> representation:-</h5>
+                <p> For column-major order, the array elements are stored in the memory <b>column by column</b> i.e. stores successive column elements and then moves to the next column.</p>
+                
+                <div class="container arr1"><img src="Column_major.png" alt="column-major"style="width: 100%; height: 100%; border-radius: 5px; margin-left: -37px;" ></div>
+            <br>
+                <p>To find address of any element using column-major order, use the following formula-</p>
+                
+                <div class="formula" style="text-align: center; border: 1px solid; "><p><i>Address(A[i][j]) = B + S  &times; [( j-SC )&times;m + ( i-SR )] </i> <br></p>
+                <br>
+                <p style="text-align: left; color: white;">
+                    B=Base address of the given matrix <br>
+                    S=Size of each element in teh storage(int=2/4, char=1, float=8 etc.) <br>
+                    i=row of the searchable element <br>
+                    j=column of the searchable element <br>
+                    m=No. of rows in the given array <br>
+                    n= No. of columns in the given array <br>
+                    SR=Starting row index of the given array <br>
+                    SC=Starting column index of the given array
+                </p>
+            </div> <br>
+<!-- Row major vs. Column major -->
+ <h5>Difference between Row-major & Column-Major order:-</h5>
+            <table>
+                <tr style="background-color: rgb(3, 175, 3);">
+                    <th>Aspects</th>
+                    <th>Row-Major order</th>
+                    <th>Column-Major Order</th>
+                </tr>
+                <tr>
+                    <td>Storage</td>
+                    <td>Data elements are stored in the memory in row wise.</td>
+                    <td>Data elements are stored in the memory in column wise.</td>
+                </tr>
+                <tr>
+                    <td>Exapmles</td>
+                    <td>For MAT[3][3] :- MAT[0][0],MAT[0][1],MAT[0][2]...........,MAT[2][2]</td>
+                    <td>For MAT[3][3] :- MAT[0][0],MAT[1][0],MAT[2][0]...........,MAT[2][2]</td>
+                </tr>
+                <tr>
+                    <td>Access efficiency</td>
+                    <td>Efficient for row-wise access.</td>
+                    <td>Efficient for column-wise access.</td>
+                </tr>
+                <tr>
+                    <td>Used in </td>
+                    <td>C, C++, Python</td>
+                    <td>Fortran, MATLAB</td>
+                </tr>
+                <tr>
+                    <td>Operations</td>
+                    <td>Row-wise operations</td>
+                    <td>Column-wise operations.</td>
+                </tr>
+                <tr>
+                    <td>Traversal</td>
+                    <td>Traverse through one complete row before move to the next row.</td>
+                    <td>Traverse through one complete column before move to the next column.</td>
+                </tr>
+                
+            </table>
+            <br>
+            <h4><i>>>Advantages </i>of Array:</h4>
+            <p>
+                <ol>
+                <li><b>Efficient Data Access:</b> Arrays allow for constant-time access to elements using their index (O(1)), 
+                    making retrieval very fast.
+                    </li>
+                <li><b>Memory Efficiency:</b> Arrays store data in contiguous memory locations, which can be more memory 
+                    efficient than some other data structures.</li>
+                <li><b>Homogeneous Data Storage:</b> Arrays store elements of the same data type, which simplifies data 
+                    manipulation and ensures uniformity.
+                    </li>
+                <li><b>Ease of Iteration:</b> Arrays are easy to iterate over using loops (e.g., for loops), making them 
+                    useful for operations on collections of data.</li>
+                <li><b>Static Memory Allocation: </b>Since arrays allocate memory at compile time (in static arrays), memory is 
+                    allocated once, reducing runtime memory management overhead.</li>
+                </ol>
+            </p>
+
+            <h4><i>>>Disadvantages </i>of Array:</h4>
+            <p>
+                <ol>
+                    <li><b>Fixed Size:</b> The size of an array is static and must be defined at the time of creation. This 
+                        means the size cannot be changed dynamically, which can lead to wasted 
+                        memory or memory shortage.</li>
+                    <li><b>Inefficient Insertion and Deletion:
+                    </b> Inserting or deleting an element in an array (especially in the middle) requires 
+                    shifting all subsequent elements, which can take O(n) time. This makes arrays 
+                    inefficient for dynamic operations.</li>
+                    <li><b>Memory Wastage:</b> If an array is created with a larger size than needed, it results in unused 
+                        memory. If it's too small, there's no room for growth.</li>
+                    <li><b>Homogeneity Restriction:
+                    </b>Arrays store only one type of data, meaning different data types (e.g., integers 
+                    and strings) cannot be mixed in a single array.
+                    </li>
+                    <li><b>Contiguous Memory Requirement:</b> Arrays need contiguous memory blocks. If the required memory size is large 
+                        and there is no sufficient contiguous memory, array allocation might fail.</li>
+                </ol>
+            </p>
+
+            <h4><i>>>Limitations </i>of Array:</h4>
+            <p>
+                <ol>
+                    <li><b>Lack of Flexibility:
+                    </b> Arrays are rigid in size; resizing is not possible once they are created, unlike 
+                    more flexible data structures like linked lists or dynamic arrays <i>(e.g., 
+                    ArrayList in Java, Vector in C++).</i></li>
+                    <li><b>No Built-In Memory Management:
+                    </b> Arrays do not handle memory allocation dynamically, so the programmer 
+                    must manage memory manually (especially in low-level languages like 
+                    C/C++).</li>
+                    <li><b>Single Type Restriction:</b> Arrays can only hold elements of the same data type, limiting their use when 
+                        dealing with heterogeneous data.
+                        </li>
+                    <li><b>Linear Search in Unsorted Arrays:
+                    </b> If the array is unsorted, searching for an element using linear search takes O(n) 
+                    time, which is inefficient for large arrays.
+                    </li>
+                    <li><b>No Dynamic Behavior:
+                    </b> Unlike linked lists or dynamic arrays, static arrays do not allow for adding or 
+                    removing elements dynamically at runtime without reallocating memory.</li>
+                </ol>
+            </p>
+
+            </div>
+        </section>
+
+
+        <div class="footer">
+            <span>&copy; 2024 Abhijit. All Rights Reserved.</span>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/components/prism-c.min.js"></script>
+
+<script>
+    function copyToClipboard(blockId, button) {
+        const codeElement = document.getElementById(blockId).getElementsByTagName('code')[0];
+        const range = document.createRange();
+        range.selectNode(codeElement);
+        window.getSelection().removeAllRanges(); // Clear current selection
+        window.getSelection().addRange(range); // Select the code block
+
+        try {
+            const successful = document.execCommand('copy');
+            if (successful) {
+                // Change button text to "Copied!"
+                button.textContent = 'Copied✅';
+                setTimeout(() => {
+                    // button.textContent = 'Copy';
+                    button.innerHTML = '<i class="bx bx-copy"></i>' ;// Reset text after 2 seconds
+                }, 5000);
+            }
+        } catch (err) {
+            console.error('Oops, unable to copy: ', err);
+        }
+
+        window.getSelection().removeAllRanges(); // Deselect the code block
+    }
+</script>
+</body>
+</html>
